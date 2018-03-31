@@ -4,7 +4,7 @@ import createModel from '../../models/pledgeAdmins.model';
 import hooks from './pledgeAdmins.hooks';
 import filters from './pledgeAdmins.filters';
 
-export default function () {
+export default function() {
   const app = this;
   const Model = createModel(app);
   const paginate = app.get('paginate');
@@ -13,7 +13,7 @@ export default function () {
     name: 'pledgeAdmins',
     id: 'id',
     Model,
-    paginate
+    paginate,
   };
 
   // Initialize our service with any options it requires
@@ -27,4 +27,4 @@ export default function () {
   if (service.filter) {
     service.filter(filters);
   }
-};
+}
